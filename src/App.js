@@ -1,7 +1,7 @@
 import React from "react";
 import axios from 'axios';
 import AddUser1 from './AddUser1';
-
+import DelUser from './DelUser';
 
 class App extends React.Component {
   constructor(props) {
@@ -14,6 +14,7 @@ class App extends React.Component {
     this.handleChange=this.handleChange.bind(this);
     this.handleClick=this.handleClick.bind(this);
     this.addUser=this.addUser.bind(this);
+    this.delUser=this.delUser.bind(this);
   }
   getData(){
      axios
@@ -61,6 +62,14 @@ class App extends React.Component {
         a
     })
   }
+  delUser(event){
+  //console.log('hi');
+    const b =this.refs.del.user1();
+    //console.log(a);
+    this.setState({
+        b
+    })
+  }
 
   render() {
 
@@ -83,6 +92,9 @@ class App extends React.Component {
         <button className="button" onClick={this.addUser}>Add USER</button>
         <AddUser1 ref="add"/>
         <div>{this.state.a}</div>
+        <button className="button" onClick={this.delUser}>Delete USER</button>
+        <DelUser ref="del"/>
+        <div>{this.state.b}</div>
       </main>
     )
   }
