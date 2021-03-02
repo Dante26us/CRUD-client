@@ -1,8 +1,8 @@
 
 .body {
     background-color: #282c34;
-    color: white;
-    padding: 40px;
+    color: orange;
+    padding: 10 px;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     text-align: center;
   }
@@ -36,7 +36,7 @@
   }
   .form{
     background-color: #282c34;
-    color: white;
+    color: orange;
     padding: 40px;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     text-align: right;
@@ -45,3 +45,38 @@
     
 
   }
+  ul.header li {
+  display: inline;
+  list-style-type: none;
+  margin: 0;
+}
+ul.header {
+  background-color: #111;
+  padding: 0;
+}
+ul.header li a {
+  color: #FFF;
+  font-weight: bold;
+  text-decoration: none;
+  padding: 20px;
+  display: inline-block;
+}
+.content {
+  background-color: #FFF;
+  padding: 20px;
+}
+.content h2 {
+  padding: 0;
+  margin: 0;
+}
+.content li {
+  margin-bottom: 10px;
+}
+.main{
+  background-color: orange;
+  margin: 0;
+  padding: 20px;
+}
+.active {
+  background-color: #0099FF;
+}

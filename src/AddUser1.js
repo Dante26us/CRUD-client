@@ -30,7 +30,7 @@ class AddUser1 extends React.Component{
   			[event.target.name]: event.target.value
   		});
   	}
-  	user(){
+  	render(){
   		//console.log('hi');
 	  	return(
 			<main className="form">
@@ -80,14 +80,7 @@ class AddUser1 extends React.Component{
 			</main>
 		);
   	}
-	render(){
 	
-		return(
-			<div>
-
-			</div>
-		);
-	}
 }
 
 

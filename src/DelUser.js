@@ -25,12 +25,12 @@ class DelUser extends React.Component{
   			[event.target.name]: event.target.value
   		});
   	}
-	user1(){
+	render(){
 	  		//console.log('hi');
 		  	return(
 				<main className="form">
 					<div>
-					<label>enter new ID :
+					<label>enter ID to be deleted :
 					<input
 		              className="textfield"
 		              type="text"
@@ -43,13 +43,6 @@ class DelUser extends React.Component{
 				</main>
 			);
 	  	}
-		render(){
 		
-		return(
-			<div>
-
-			</div>
-		);
-	}
 }
 export default DelUser
