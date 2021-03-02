@@ -9,8 +9,10 @@ class AddUser1 extends React.Component{
     	};
     	this.handleSubmit=this.handleSubmit.bind(this);
     	this.handleChanges=this.handleChanges.bind(this);
+    	this.onValueChange = this.onValueChange.bind(this);
   	}
   	handleSubmit(event){
+  		//console.log(this.state.gender);
   		const newChar={
   				"name": this.state.name,
      			"gender": this.state.gender,
@@ -30,6 +32,11 @@ class AddUser1 extends React.Component{
   			[event.target.name]: event.target.value
   		});
   	}
+  	onValueChange(event) {
+    this.setState({
+      gender: event.target.value
+    });
+  }
   	render(){
   		//console.log('hi');
 	  	return(
@@ -52,12 +59,18 @@ class AddUser1 extends React.Component{
 	              onChange={this.handleChanges}/>
 				</label><br />
 				<label>enter Gender :
-				<input
-	              className="textfield"
-	              type="text"
-	              name="gender"
-	              placheholder="enter the gender"
-	              onChange={this.handleChanges}/>
+				<input 
+					type="radio" 
+					value="Male" 
+					name="gender"  
+					checked={this.state.gender === "Male"}
+	              	onChange={this.onValueChange} />Male
+        		<input 
+	        		type="radio" 
+	        		value="Female" 
+	        		name="gender" 
+	        		checked={this.state.gender === "Female"}
+	             	onChange={this.onValueChange}/> Female
 				</label><br />
 				<label>enter Movie :
 				<input
