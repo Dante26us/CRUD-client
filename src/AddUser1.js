@@ -18,7 +18,7 @@ class AddUser1 extends React.Component{
      			"gender": this.state.gender,
       			"movie": this.state.movie,
       			"actor": this.state.actor,
-      			"id": this.state.newId
+      			"characterId": this.state.newId
   				}
   		//alert('A form was submitted: ' + JSON.stringify(newChar));
 		axios.post('http://localhost:8080/addCharacter',newChar)

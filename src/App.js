@@ -21,10 +21,10 @@ class App extends React.Component {
      .get('http://localhost:8080/'+this.state.charId,{})
         .then(response => {
           const data = response.data
-          //console.log(data)
+          console.log(data)
           const fetch=[data].map((u) =>{
            return(
-            <div key={u.id}>  
+            <div key={u.charId}>  
             <p>{u.name}</p>
             <p>{u.gender}</p>
             <p>{u.movie}</p>
